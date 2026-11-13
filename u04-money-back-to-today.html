@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bringing Money Back to Today</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #F7F5F0; }
+  body { display: flex; align-items: center; justify-content: center; }
+  video { width: 100%; max-height: 100vh; aspect-ratio: 16 / 9; background: #F7F5F0; display: block; }
+  #cc { position: fixed; top: 12px; right: 12px; z-index: 2; font: 600 14px/1 system-ui, sans-serif;
+         color: #FFFFFF; background: rgba(27, 33, 29, 0.78); border: 0; border-radius: 6px;
+         padding: 9px 12px; cursor: pointer; }
+  #cc:focus-visible { outline: 3px solid #FFD84D; outline-offset: 2px; }
+  video::cue { font-family: Georgia, 'Times New Roman', serif; font-size: 1.05em; line-height: 1.35;
+               color: #FFFFFF; background: rgba(27, 33, 29, 0.86); }
+</style>
+</head>
+<body>
+<video id="v" controls playsinline preload="metadata"
+       aria-label="Bringing Money Back to Today" src="u04-money-back-to-today.mp4"></video>
+<button id="cc" type="button" aria-pressed="true">Captions: on</button>
+<script>
+  const cues = "WEBVTT\n\n00:00:00.000 --> 00:00:01.780\nBringing money back to today.\n\n00:00:02.930 --> 00:00:05.040\nSay you've won a scholarship that pays you\n\n00:00:05.090 --> 00:00:07.200\n$2,000 a year for the next three years.\n\n00:00:07.490 --> 00:00:09.020\nThat's $6,000 in all.\n\n00:00:09.590 --> 00:00:12.970\nNow, someone offers to\nswap it for $5,500 paid\n\n00:00:13.020 --> 00:00:16.400\nright now today should you take the deal.\n\n00:00:17.787 --> 00:00:19.587\nTo answer that, we need to know what\n\n00:00:19.637 --> 00:00:21.437\nmoney in the future is worth today.\n\n00:00:22.067 --> 00:00:24.157\nLet's start with money that grows.\n\n00:00:25.047 --> 00:00:26.957\nSay you can save at 6% a year.\n\n00:00:27.007 --> 00:00:33.157\nIf you put in about $0.94 today, in\na year, it will have grown to $1.\n\n00:00:33.527 --> 00:00:37.557\nSo $1 a year from now is\nworth about $0.94 today,\n\n00:00:38.067 --> 00:00:40.567\nassuming you have access\nto a savings account\n\n00:00:40.617 --> 00:00:43.117\nor something else paying you 6% a year.\n\n00:00:43.987 --> 00:00:47.357\nThat works for any number of years.\n\n00:00:47.667 --> 00:00:51.737\nA dollar that arrives in two\nyears has to come back two steps,\n\n00:00:52.027 --> 00:00:54.297\nso it's worth about $0.89 today.\n\n00:00:54.347 --> 00:00:56.977\nA dollar in three years comes back\n\n00:00:57.027 --> 00:00:59.657\nthree steps, and it's worth about $0.84.\n\n00:01:00.427 --> 00:01:03.157\nThe longer the wait, the\nless it's worth today.\n\n00:01:03.970 --> 00:01:05.920\nNow, let's stack those up.\n\n00:01:06.490 --> 00:01:11.280\n$0.94 plus $0.89 plus\n$0.84 is about $2.67.\n\n00:01:12.030 --> 00:01:15.920\nThat's what $1 a year for three\nyears is worth today at 6%.\n\n00:01:16.210 --> 00:01:19.040\nThis number has a name. It's\ncalled the annuity factor.\n\n00:01:19.940 --> 00:01:23.610\nYour scholarship pays\n$2,000 a year, not $1.\n\n00:01:23.660 --> 00:01:24.790\nSo multiply.\n\n00:01:25.340 --> 00:01:32.270\n$2,000 times the annuity\nfactor, 2.673, is $5,346.\n\n00:01:33.160 --> 00:01:38.850\nThree payments of $2,000\nare worth $5,346 today.\n\n00:01:39.213 --> 00:01:41.543\nFor three payments, stacking by hand is\n\n00:01:41.593 --> 00:01:43.923\neasy, but for 30 payments, it isn't.\n\n00:01:44.393 --> 00:01:46.883\nSo there's a formula that gives\nthe height of the stack directly.\n\n00:01:47.553 --> 00:01:51.643\nFor 30 payments at 6%, it gives 13.76.\n\n00:01:51.723 --> 00:01:55.673\nSo should you take $5,500 today?\n\n00:01:56.483 --> 00:02:00.413\nYour scholarship is worth $5,346 today.\n\n00:02:00.603 --> 00:02:04.433\nSo $5,500 is the better deal by $154.\n";
+  const v = document.getElementById('v');
+  const t = document.createElement('track');
+  t.kind = 'captions'; t.label = 'English'; t.srclang = 'en'; t.default = true;
+  t.src = URL.createObjectURL(new Blob([cues], { type: 'text/vtt' }));
+  v.appendChild(t);
+  t.addEventListener('load', () => { v.textTracks[0].mode = 'showing'; });
+  const cc = document.getElementById('cc');
+  cc.addEventListener('click', () => {
+    const on = v.textTracks[0].mode !== 'showing';
+    v.textTracks[0].mode = on ? 'showing' : 'hidden';
+    cc.setAttribute('aria-pressed', on); cc.textContent = on ? 'Captions: on' : 'Captions: off';
+  });
+  if (new URLSearchParams(location.search).get('test')) { v.muted = true; v.play(); }
+  const at = new URLSearchParams(location.search).get('t');
+  v.addEventListener('loadedmetadata', () => { v.currentTime = at ? parseFloat(at) : 0.1; });
+</script>
+</body>
+</html>

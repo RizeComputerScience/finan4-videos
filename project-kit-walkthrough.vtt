@@ -1,0 +1,172 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.670
+Filling in your project kit, the draft steps.
+
+00:00:04.700 --> 00:00:06.010
+This is the kit for Cragmoor,
+
+00:00:06.660 --> 00:00:08.530
+a made-up chain of climbing gyms.
+
+00:00:09.500 --> 00:00:12.730
+Your company's kit has the same rows in the same places.
+
+00:00:13.700 --> 00:00:15.530
+The grey cells are numbers from
+
+00:00:15.580 --> 00:00:17.850
+the company's reports filled in for you.
+
+00:00:18.620 --> 00:00:20.190
+The yellow cells are yours.
+
+00:00:21.280 --> 00:00:22.490
+Next to every yellow cell,
+
+00:00:23.120 --> 00:00:25.650
+column C tells you which cells to use.
+
+00:00:26.400 --> 00:00:29.650
+Step one, builds one full year of cash flow for
+
+00:00:29.700 --> 00:00:34.350
+one new gym. The first yellow cell is the cash profit before tax.
+
+00:00:35.200 --> 00:00:37.310
+Column C says revenue times cash margin,
+
+00:00:37.920 --> 00:00:41.890
+so I'll type equals B times B50 and press Enter.
+
+00:00:42.640 --> 00:00:44.310
+That's 1.7 million.
+
+00:00:45.420 --> 00:00:48.030
+I'll fill in the next four rows the same way,
+
+00:00:48.360 --> 00:00:49.870
+reading column C each time.
+
+00:00:50.920 --> 00:00:54.730
+A full year's cash flow comes to about 1.21 million.
+
+00:00:55.580 --> 00:00:57.350
+The last cell is year zero,
+
+00:00:57.400 --> 00:00:59.190
+the cost to open the gym.
+
+00:00:59.980 --> 00:01:01.070
+That's money going out,
+
+00:01:01.480 --> 00:01:02.870
+so I'll type it as a negative number.
+
+00:01:03.500 --> 00:01:05.290
+Under every step, there's a check row.
+
+00:01:06.240 --> 00:01:07.250
+When every cell is right,
+
+00:01:07.420 --> 00:01:08.370
+it shows a check mark.
+
+00:01:09.000 --> 00:01:09.870
+If a cell is wrong,
+
+00:01:10.200 --> 00:01:11.690
+it tells you which one to fix.
+
+00:01:12.360 --> 00:01:13.550
+Step two is the hurdle rate,
+
+00:01:13.620 --> 00:01:16.910
+worked in dollars, the same way as the food trucks.
+
+00:01:17.380 --> 00:01:21.330
+The owner's stake is the number of shares times today's share price.
+
+00:01:21.880 --> 00:01:24.670
+The return the owners expect is the treasury rate
+
+00:01:25.240 --> 00:01:27.430
+plus beta times the market premium.
+
+00:01:28.660 --> 00:01:31.130
+Then come the dollars a year for lenders,
+
+00:01:31.720 --> 00:01:33.390
+the dollars a year for owners,
+
+00:01:33.620 --> 00:01:34.730
+and the hurdle rate,
+
+00:01:35.340 --> 00:01:38.690
+which is the total dollars divided by all the money put in.
+
+00:01:39.300 --> 00:01:42.210
+For Cragmoor, that's 9.4%.
+
+00:01:42.300 --> 00:01:46.010
+In step three, the year table fills itself in
+
+00:01:46.060 --> 00:01:48.190
+from your step one and step two cells.
+
+00:01:49.260 --> 00:01:51.570
+Each year's cash flow is brought back to today
+
+00:01:51.760 --> 00:01:53.190
+at your hurdle rate.
+
+00:01:54.040 --> 00:01:59.410
+You type one formula equals sum of the present value column.
+
+00:02:00.740 --> 00:02:03.410
+Cragmoor's NPV is 1.91 million.
+
+00:02:04.200 --> 00:02:04.910
+It's above zero.
+
+00:02:05.440 --> 00:02:08.470
+So on these numbers, one new gym is worth building.
+
+00:02:09.260 --> 00:02:12.230
+Step four asks how wrong these numbers could be.
+
+00:02:13.060 --> 00:02:15.210
+The base case is filled in for you.
+
+00:02:15.760 --> 00:02:18.670
+You choose a worst case and a best case for each input.
+
+00:02:19.220 --> 00:02:22.050
+And each choice should come from something in your fact sheet.
+
+00:02:23.160 --> 00:02:25.910
+Cragmoor's newer gyms earned between 4.3 million
+
+00:02:26.160 --> 00:02:28.070
+and 5.6 million a year.
+
+00:02:28.520 --> 00:02:29.910
+So I'll use those for revenue.
+
+00:02:30.500 --> 00:02:34.290
+As I type, the kit works out the NPV of each case.
+
+00:02:34.820 --> 00:02:37.950
+In my worst case, the gym loses 2.15 million.
+
+00:02:38.660 --> 00:02:41.850
+In my best case, it adds 5.47 million.
+
+00:02:42.820 --> 00:02:45.550
+That range is what your draft memo is about.
+
+00:02:46.120 --> 00:02:48.470
+The NPV, your worst and best cases,
+
+00:02:48.520 --> 00:02:51.510
+and what would have to be true for your answer to change.
