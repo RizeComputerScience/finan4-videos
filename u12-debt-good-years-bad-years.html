@@ -17,7 +17,7 @@
 </style>
 </head>
 <body>
-<video id="v" controls playsinline preload="metadata"
+<video id="v" controls playsinline preload="metadata" poster="u12-debt-good-years-bad-years.jpg"
        aria-label="Debt Makes Good Years Better and Bad Years Worse" src="u12-debt-good-years-bad-years.mp4"></video>
 <button id="cc" type="button" aria-pressed="true">Captions: on</button>
 <script>
@@ -36,7 +36,7 @@
   });
   if (new URLSearchParams(location.search).get('test')) { v.muted = true; v.play(); }
   const at = new URLSearchParams(location.search).get('t');
-  v.addEventListener('loadedmetadata', () => { v.currentTime = at ? parseFloat(at) : 0.1; });
+  if (at) v.addEventListener('loadedmetadata', () => { v.currentTime = parseFloat(at); });
 </script>
 </body>
 </html>
